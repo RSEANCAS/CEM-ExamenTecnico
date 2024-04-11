@@ -1,0 +1,29 @@
+<div class="col-lg-3 col-md-5">
+    <div class="card" style="width: 20rem;">
+        <h5 class="card-header">
+            <strong>
+                <p>{{item.documentTypeDescription}}</p>
+                <p>{{item.documentNumber}}</p>
+            </strong>
+        </h5>
+        <div class="card-body">
+            <p class="card-text">Nombres: {{item.name}}</p>
+            <p class="card-text">Apellido Paterno: {{item.fathersLastName}}</p>
+            <p class="card-text">Apellido Materno: {{item.mothersLastName}}</p>
+            <p class="card-text">Dirección: {{item.address}}</p>
+            <p class="card-text">Departamento: {{item.regionDescription}}</p>
+            <p class="card-text">Provincia: {{item.provinceDescription}}</p>
+            <p class="card-text">Distrito: {{item.ubigeoDescription}}</p>
+            <p class="card-text">Teléfono: {{item.address}}</p>
+            <p class="card-text">Email: {{item.email}}</p>
+        </div>
+        <div class="card-footer">
+            <p>
+                <a href="/user/maintenance/{{item.documentNumber}}" style="width: 100%;" class="btn btn-primary">Editar</a>
+            </p>
+            <p>
+                <a href="javascript:void(0)" style="width: 100%;" class="btn btn-danger" (click)="Eliminar(item.documentNumber)">Eliminar</a>
+            </p>
+        </div>
+    </div>
+</div>
